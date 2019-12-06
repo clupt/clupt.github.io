@@ -1,0 +1,100 @@
+<!DOCTYPE1 HTML>
+<html>
+    <head>
+        <title>Chris Lupton's Opspark Website</title>
+            <style>
+                body {
+                    background: rgb(47,79,79);
+                    color: rgb(45, 45, 45);
+                    padding: 10px;
+                    font-family: monospace;
+                }
+                header {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                }
+                #all-contents {
+                    max-width: 800px;
+                    margin: auto;
+                }
+                /* nav menu*/
+                nav{
+                    background: rgb(255,255,240);
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                    display: flex;
+                    padding: 10px;
+                    border-radius: 25px;
+                }
+                nav header {
+                    display: flex;
+                    align-items: center;
+                    color: rgb(253,245,230);
+                    flex: 1;
+                }
+                nav ul {
+                    list-style-image: none;
+                }
+                navc a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+                /*main container area beneath menu*/
+                main {
+                    background: rgb(46,139,87);
+                    display: flex;
+                }
+                .sidebar {
+                    margin-right: 25px;
+                    /*padding: 10px;*/
+                    border-style: ridge;
+                    border-width: 10px;
+                    border-color: rgb(0,255,127);
+                }
+                .sidebar img{
+                    width: 300px;
+                    border-color: rgb(0,255,127)
+                    
+                }
+                .content {
+                    flex: 1;
+                    padding: 15px;
+                }
+                .interests header {
+                    font-size: 1.25em;
+                }
+            </style>
+    </head>
+
+    <body>
+        <div id="all-contents">
+            <nav>
+                <ul>
+                    <li><a href ="index.html">Home</a></li>
+                    <li><a href ="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <div class="sidebar">
+                    <img src="http://www.jejuweekly.com/news/photo/201101/1155_1777_2421.jpg">
+                </div>
+                <div class="content">
+                    <header>Chris Lupton</header>
+                        <p>Operation Spark Bootcamp Student</p>
+
+                        <section class="interests">
+                            <header>Interests</header>
+                            <ul>
+                                <li>Playing Go</li>
+                                <li>Cooking</li>
+                                <li>Reading</li>
+                            </ul>
+                        </section>
+                </div>
+            </main>
+        
+        </div>
+    </body>
+
+</html>
