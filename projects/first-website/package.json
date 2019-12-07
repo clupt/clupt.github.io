@@ -1,0 +1,17 @@
+{
+  "name": "first-website",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "~3.5.0",
+    "express": "^4.15.3",
+    "mocha": "^3.4.1",
+    "zombie": "^5.0.5"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha ./test/index.spec.js || :",
+    "posttest": "rm -rf ../first-website"
+  }
+}

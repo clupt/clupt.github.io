@@ -29,7 +29,7 @@
                 nav header {
                     display: flex;
                     align-items: center;
-                    color: rgb(253,245,230);
+                    color: rgb(49, 79, 79);
                     flex: 1;
                 }
                 nav ul {
@@ -50,6 +50,10 @@
                     border-style: ridge;
                     border-width: 10px;
                     border-color: rgb(0,255,127);
+                    
+                    max-width:100%;
+                    height:auto;
+
                 }
                 .sidebar img{
                     width: 300px;
@@ -68,10 +72,13 @@
 
     <body>
         <div id="all-contents">
-            <nav>
+           <nav>
+                <header>Chris Lupton's Website</header>
                 <ul>
-                    <li><a href ="index.html">Home</a></li>
-                    <li><a href ="portfolio.html">Portfolio</a></li>
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="portfolio.html">Portfolio</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -80,15 +87,15 @@
                     <img src="http://www.jejuweekly.com/news/photo/201101/1155_1777_2421.jpg">
                 </div>
                 <div class="content">
-                    <header>Chris Lupton</header>
+                        <h1>Chris Lupton</h1>
                         <p>Operation Spark Bootcamp Student</p>
 
                         <section class="interests">
-                            <header>Interests</header>
+                            <h1>Interests</h1>
                             <ul>
                                 <li>Playing Go</li>
                                 <li>Cooking</li>
-                                <li>Reading</li>
+                                <li>Hammocks</li>
                             </ul>
                         </section>
                 </div>
