@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            /*global $*/
+            const topics = [ 'variables', 'datatypes', 'string-manipulation', 'operators', 'control-flow', 'loops', 'functions' ];
+            const topicElements = topics.forEach(function(topic, index) {
+                const $header = $('<h2>').addClass('topic-heading').text(topic);
+                const $div = $('<div>').addClass('code').attr('id', topic).append($header);
+                $.get(`./studies/${topic}.js`, function (response) {
+                    const split = response.split('\n');
+                    const $splitElements = split.map(function(line, index) {
+                        const $line = $('<div>').addClass('line');
+                        const $lineNumber = $('<div>').addClass('line-number').text(index);
+                        const $content = $('<div>').addClass('line-content').text(line);
+                        return $line.append($lineNumber, $content);
+                    });
+                    $div.append($splitElements);
+                    $div.appendTo('.content');
+                }, 'text'); // 'text' makes sure the JS file isn't executed
+            });
+        </script>
+        <link rel="stylesheet" href="./css/studies.css" type="text/css" />
+        <title>Studies</title>
+    </head>
+    <body>
+        <div id="all-contents">
+        <nav>
+            <header>Chris Lupton</header>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="studies.html">Studies</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content">
+                <h1>Javascript</h1>
+
+            </div>
+        </main>
+    </div>
+    </body>
+</html>

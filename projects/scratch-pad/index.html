@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.3/mocha.min.css">
+</head>
+<body>
+  <div id="mocha"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.3/mocha.min.js"></script>
+  <script>mocha.setup('')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.4.0/lodash.min.js"></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/4.0.0/sinon.min.js"></script>
+  <script>
+    var assert = chai.assert;
+    var expect = chai.expect;
+    var should = chai.should();
+  </script>
+
+  <!-- include source files here... -->
+  <script src="day-1/my-first-test.js"></script>
+  <script src="day-1/stringy.js"></script>
+  <script src="day-1/homework/reverse-string.js"></script>
+
+  <script src="day-2/greeter-app.js"></script>
+  <script src="day-2/loops.js"></script>
+  <script src="day-2/homework/fizz-buzz.js"></script>
+  
+  <script src="day-3/type.js"></script>
+  <script src="day-3/first-class-functions.js"></script>
+  <script src="day-3/homework/range.js"></script>
+  
+  <script src="day-4/contact-list.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="spec/my-first-test.spec.js"></script>
+  <script src="spec/stringy.spec.js"></script>
+  <script src="spec/reverse-string.spec.js"></script>
+  
+  <script src="spec/greeter-app.spec.js"></script>
+  <script src="spec/loops.spec.js"></script>
+  <script src="spec/fizz-buzz.spec.js"></script>
+  
+  <script src="spec/type.spec.js"></script>
+  <script src="spec/first-class-functions.spec.js"></script>
+  <script src="spec/range.spec.js"></script>
+  
+  <script src="spec/contact-list.spec.js"></script>
+
+  <script>mocha.run()</script>
+</body>
+</html>
