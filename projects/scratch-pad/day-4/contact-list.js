@@ -50,8 +50,6 @@ function makeContact(id, nameFirst, nameLast) {
      */
         //declare an array literal that will hold the contacts 
         var contacts = [];
-        //declare a string to hold a string of all of the contacts
-        var all = '';
         
         return {
         // we implemented the length api for you //
@@ -119,55 +117,46 @@ function makeContact(id, nameFirst, nameLast) {
             
         //create a function to print all contacts
             printAllContactNames: function (){
+                //declare a string to hold a string of all of the contacts
+                var all = '';
+                //loop through all contacts but the final contact
+                for(var i = 0; i < contacts.length-1; i++){
+                    //add each contact (with a space between first and last names) to the string variable all
+                    //use '\n' to create a new line after each contact
+                    all+=contacts[i].nameFirst + " " + contacts[i].nameLast + "\n";
+                    //return the string all adding the last index of contactsy at the end so there is no new line
+                    } return all+=contacts[i].nameFirst + " " + contacts[i].nameLast;
+                }
+            };
+        }
 
+                        //HERE ARE SOME OF FAIED ATTEMPTS TO REVISIT AND FIX
+                           
     //               for(var i = 0; i < contacts.length; i++){
-    //                 let fullName = contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast'];
-    //                 all = all + fullName('\n');
+    //                  var fullNames = contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast']('\n');  
+    //                  return all += fullNames;
     //                 }
     //             return all.slice(-2);
     //         }
     //     };
     // }
             
-    //     //store the full names of the contacts into the variable fullName, with the appropriate space between first and last names
-    //                 let fullName = contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast'];
-    //     //store the last index of the contacts array into the variable lastIndex
-    //                 let lastIndex = contacts.length - 1;
-    //     //store the last object of the contacts array into the variable lastObject
-    //                 let lastObject = contacts[lastIndex];
-    //     //store the last contacts object into the lastFullName variable, and provide a space between 1st and last names
-    //                 let lastFullName = lastObject.join(' ');
-    //                 for(var i = 0; i === contacts.length; i++){
-    //                 all = all + fullName('\n') + lastFullName;
-    //                 }
-    //             return all;
-    //             }   
-    //     };
-    // }
-    
-    //                 all = all + (contacts[i].nameFirst + ' ' + contacts[i].nameLast) + ('\n').slice(-2);
-    //                 }
-    //             return all;
-    //         }
-    //     };
-    // }
-    
-           
-    //     //loop through the array of contacts
-                for(var i = 0; i < contacts.length; i++){
-                    let fullName = contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast'];
-                    all += fullName('\n');
-                    }
-                return all.slice(-2);
-            }
-        };
-    }
+        // //store the full names of the contacts into the variable fullName, with the appropriate space between first and last names
+        //             var fullName = contacts[i]['nameFirst'] + ' ' + contacts[i]['nameLast'];
+        // //store the last index of the contacts array into the variable lastIndex
+        //             var lastIndex = contacts.length-1;
+        // //store the last object of the contacts array into the variable lastObject
+        //             var lastObject = contacts[lastIndex];
+        // //store the last contacts object into the lastFullName variable, and provide a space between 1st and last names
+        //             var lastFullName = lastObject.join(' ');
+        //             for(var i = 0; i < contacts.length; i++){
+        //             return all += (fullName('\n') + lastFullName);
+        //             }
+        //         return all;
+        //         }
+        //     }; 
+        // }
         
-
-
-
-
-
 // YOUR CODE GOES ABOVE HERE //
 
 
