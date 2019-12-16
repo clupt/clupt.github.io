@@ -20,31 +20,35 @@
  * been met. Else statements end the chain.
  */
  
- //1. If
+ //1. If 
  
 /**
  * The if keyword is used to present the code with a condition. This condition
  * will always resolve to a boolean value - either true or false.
  */
+ 
   if (true){
       console.log('Our condition was met and this code block is executed.');
   }
+  
 /** 
  * In the example above, the boolean value of true is determined to be true,
  * and as a result the code block in the {} that follows in run. Had the
  * condition been false, that code block would NOT have been executed.
  */
+ 
   var age = 18;
   if (age < 25){
       console.log('Not old enough to rent a car.');
   }
+  
 /** 
  * In this example, the value of a variable is being compared to a set value 
  * with the logical (less than) operator <. That value was less than 25, so the 
  * condition was met and the following code block was executed.
  */
  
- //2. Else-if
+ //2. Else-if 
  
 /** Unlike the if statement, we can present the code with any number of else if
  * statements. Since the first condition was not met, how about this one? That
@@ -66,7 +70,7 @@
  * the code block that followed was executed.
  */
   
- //3. Else
+ //3. Else 
  
 /**
  * But what happens when none of our conditions are determined to be true? The 
@@ -91,7 +95,7 @@
         console.log('Today is too HOT!'); //=> prints 'Today is too HOT!'//
     }
   
-  //4. Switch
+  //4. Switch 
  
 /**
  * Another way to control the flow of our code with conditions if through the

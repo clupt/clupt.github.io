@@ -18,16 +18,15 @@
  var res = varOne - varTwo;
  console.log(res); // ==> prints the NUMBER 1
  
- 
  /** 
- * There is also Explicit type coercion, or Type Conversion, is where the developer 
- * uses code to intentionally convert one datatype to another. 
+ * There is also Explicit type coercion where the developer uses code to intentionally 
+ * convert one primitive datatype to another. 
  */
  
- var num = 5;
+ var num = 5;// ==> Is the NUMBER 5
  console.log(num.toString()); //==> prints the STRING '5'
  
- //Primitive Datatypes
+ // Primitive Datatypes //
  
 /**
  * 1. Numbers are used for any numerical value: positive, negative, decimal points, etc...
@@ -41,6 +40,7 @@
  let currentAge = 36;
  let yearBorn = 2019 - currentAge;
  console.log(yearBorn);//==> prints the number 1983
+ 
  
  /**
  * 2. Strings are used for textual data. They are characters wrapped in '', or 
@@ -92,38 +92,112 @@
  * -null
  * -NaN
  * -the Number 0 (not the string '0')
- * 
- * 4. undefined are undefined values.
- * 
- * 5. null is used to denote the absence of value.
- *
- * 6. NaN is a numeral type which stands for Not a Number.
  */
+ 
+ /**
+ * 4. undefined is the falsy value automatically assigned to variables when they are declared,
+ * but not yet defined.
+ */
+ 
+ var undef;
+ console.log(undef);//==> prints undefined
+ 
+ /**
+ * 
+ * 5. null is the falsy value assigned to something that has no value. It can be assigned to a variable
+ * to indicate that although defined, the it has not yet been assigned a value.
+ */
+ 
+ var nullVar = null;
+ console.log(nullVar);//==> prints null
+ 
+ /**
+ * 6. NaN is a falsy, special numeral type which stands for Not a Number.
+ */
+ 
+ var nopeNum = 0/0;
+ console.log(nopeNum);
+ console.log(NaN+3);
  
  //Complex Datatypes
  
- //TALK ABOUT BRACKET NOTATION AND DOT NOTATION HERE
 /**
- * 1. Objects
- * 
- * 2. Arrays
- * 
- * 3. Functions
+ * 1. Objects are used to store collections of related data. Data is stored in
+ * key value pairs. Values are stored at keys in key value pairs inside of objects.
+ * Objects can contain references to any other data type: strings, booleans, arrays,
+ * objects, and functions. There is no limit to the number of key value pairs that an object can
+ * contain. Unlike arrays, objects do not have indexes or a length property. The values stored
+ * inside of objects are not ordered. Objects are like dictionaries, where every word has a corresponding
+ * definition. Every value in an object has a corresponding key. Both bracket notation and dot notation
+ * can be used with to access the properties of an object.
+ */
+
+ var objMe = {
+  name: 'Chris',
+  age: 36,
+  hometown: 'New Orleans',
+  needs: 'Sleep'
+ };
+ 
+ console.log(objMe);
+ 
+ let myName = objMe.name;
+ console.log(myName);//==> prints Chris
+ let myAge = objMe['age'];
+ console.log(myAge);//==> prints 36
+ objMe.needs = 'to study';//==> Changes the value of needs from Sleep to To study
+ 
+ /**
+ * 2. Arrays are a complex datatype used to store collections of data. They are mutable, flexible, capable of 
+ * housing a limitless number of elements, have a length property, and are [0] indexed. All datatypes can
+ * be stored in arrays. The elements in an array can be accessed using bracket notation. 
+ * They do NOT accept dot notation.
  */
  
+ let arrPlanets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
+ console.log(arrPlanets.length);//==> prints 9
+ console.log(arrPlanets[2]);//==> prints Earth
+ 
+ // There are a number of methods that can be used to alter arrays. Here is an example of .pop(), which removes 
+ //the last element from an array.
+ 
+ arrPlanets.pop();
+ console.log(arrPlanets);//==> Pluto has left the game.
+ 
+ /**
+ * 3. Functions are another complex datatype. They perform actions. Inputs are passed to them and then they execute
+ * a code block and return a value. They are reusable. They behave like any other object. They can be stored in
+ * variables, can be passed through other functions, and functions can also be returned from other functionbs.
+ * They will be discussed elsewhere at length, so I'll just provide a quick example of one of possible syntax below. 
+ */
+ 
+ function birthYear(el){
+  return 2019 - el;
+ }
+ console.log(birthYear(33));//==> prints 1986
+
  //Infinity and -Infinity
  
 /**
-  * 1. Infinity
-  * 
-  * 2. -Infinity
+  * 1. Infinity is a special numeric value that represents mathematical infinity, and
+  * has the value of being higher than any number. 
   */
+  
+  var inf = 1/0;
+  console.log(inf);//=>prints Infinity
+  
+  /**
+  * 2. -Infinity is a special numeric value that represents a value that is lower than any 
+  * other number. 
+  */
+  
+  var negInf = -34/0;
+  console.log(negInf);//==>prints -Infinity
  
  
  // The differences between Primitive and Complex Datatypes
  
  /**
-  * 
   * Primitive datatypes are immutable. They cannot be altered. Variables that hold 
   * primitive datatypes can be reassigned, but the primitive itself cannot be changed. 
   * They are copied by value. This means that if a primitive datatype is assigned to 
@@ -142,3 +216,30 @@
   * elements within them (and they are not fixed in size) their values cannot be stored to memory
   * in the variables to which they are assigned. 
   */ 
+
+ /** 
+  * Here is an example of how primitive datatypes are immutable and are copied by value.
+  * Changing the value of a does not effect the value of b. Both hold their own copy of
+  * the data.
+  */
+
+ let a = 14;
+ let b = a;
+ a = 13;
+ console.log(a);//==>prints 13
+ console.log(b);//==>prints 14
+ 
+ //Here is an example of how complex datatypes are mutable and are copied by reference.
+  
+  let obj1 = {
+   name: 'Cornelius',
+   age: 23
+  };
+  
+ //All we are doing below with obj2 is creating a new reference that points to obj1
+ 
+  let obj2 = obj1;
+  obj1.age = 72;
+  
+  console.log(obj1.age);//==> prints 72
+  console.log(obj2.age);//==> also prints 72

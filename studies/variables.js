@@ -16,35 +16,36 @@
  * (or assignment).
  */
 
-// 1. declaration //
+// 1. declaration 
 var myName;
 
 /**
  * At the declaration phase, the variable myName is undefined because we have 
  * NOT initialized it to anything
  */
-console.log(myName); // prints => undefined
+ 
+console.log(myName);// prints ==> undefined
 
 // 2. initialization or assignment. 
 myName = 'john';
-console.log(myName); // prints => john
+console.log(myName);// prints ==> john
 
-// 3. re-assignment //
+// 3. re-assignment 
 myName = 'bob';
-console.log(myName); // prints => bob
+console.log(myName);// prints ==> bob
 
 /**
  * NOTE: We can assign and re-assign anything to a variable - 
  * we cannot do this with constants 
  */
 var myVariable = 1;
-console.log(myVariable); // => prints 1
+console.log(myVariable); // ==> prints 1
 myVariable = true; 
-console.log(myVariable); // => reassigned and now prints true
+console.log(myVariable); // ==> reassigned and now prints true
 myVariable = "someString";
-console.log(myVariable); // =>reassigned again and now prints someString
+console.log(myVariable); // ==> reassigned again and now prints someString
 
-// 4. var //
+// 4. var 
 
 /**
  * The var keyword is used in JavaScript to declare a variable. It can be
@@ -53,13 +54,21 @@ console.log(myVariable); // =>reassigned again and now prints someString
  * declared inside of a function will only be recognized in that function.
  */
 
-// //FIX THIS EXAMPLE
-// function setHeight(){
-//     var height = 10;
-// }
-// // trying to call height outside of this function will throw a reference error
+function setHeight(){
+    var height = 10;
+    console.log(height);
+}
 
-// 5. let, const //
+/**
+ * console.log(height) OUTSIDE of this function will throw a ReferenceError, 
+ * since the height variable is function scoped, and was declared inside of the
+ * setHeight function. If the var had been declared in the global scope, then
+ * it would be accessible both outside of the setHeight function, and inside
+ * of the setHeight function. But we declared it in there, so that's where it
+ * is stuck.
+ */
+
+// 5. let, const 
 
 /**
  * Unlike var, variables declared with the let keyword are block-
@@ -67,9 +76,10 @@ console.log(myVariable); // =>reassigned again and now prints someString
  * let variables can be updated, but not re-declared. 
 */
 let day = 'Monday';
-console.log(day); // => prints Monday
+console.log(day); // ==> prints Monday
 day = 'Tuesday';
-console.log(day); // => reassigning day to Tuesday is fine. This prints Tuesday.
+console.log(day); // ==> reassigning day to Tuesday is fine. This prints Tuesday.
+
 /**
  * re-declaring let day = 'Tuesday' here, however, would throw the 
  * SyntaxError: Identifier 'day' has already been declared
@@ -80,14 +90,16 @@ console.log(day); // => reassigning day to Tuesday is fine. This prints Tuesday.
  * scoped. They cannot be updated or re-assigned, even within the scope in 
  * which they are declared. 
  */
+ 
 const greeting = 'hello';
 console.log(greeting);
+
 /** 
  * reassigning const greeting = 'hi' would throw a 
  * TypeError: Assignment to constant variable
  */
 
-// 6. hoisiting //
+// 6. hoisiting 
 
 /**
  * Hoisting is the JavaScript default behavior of moving all variables and
@@ -109,7 +121,7 @@ console.log(a); // => this will print 3
  * and will throw a ReferenceError if referenced before being declared.
  */
  
- //TEMPORAL DEAD ZONE
+ // TEMPORAL DEAD ZONE 
  
  /**
   * The temporal dead zone refers to an issue in ES6 with trying to access variables
