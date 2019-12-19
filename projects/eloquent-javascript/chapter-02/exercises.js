@@ -69,17 +69,17 @@ function drawChessboard(size) {
       //use a conditional statement to determine if the rows will begin with a space or a #
       //add ' ' or '#' to the rows pending on whether they are even or odd, so that it alternates
       
-      //if the i+j is even, concat a ' ' to the board variable
-      //otherwise concat '#' to the board variable
+      // if the i+j is even, concat a ' ' to the board variable
+      // otherwise concat '#' to the board variable
       board += (i % 2) === (j % 2) ? ' ' : '#';
     }
-      //instead of the ternary operator for this, could use an if else statement:
-      //if ((i+j) % 2 === 0){
-      //board += ' ';
-      //} else {
-      //board += '#';
-      //}
-      
+    // instead of the ternary operator for this, could use an if else statement:
+    //   if ((i+j) % 2 === 0){
+    //   board += ' ';
+    //   } else {
+    //   board += '#';
+    //   }
+    // } 
     //after the interal loop has ended at the size arg, add a new line break
     //to move to the next row, which is also limited to the size (so we have a grid)
     //could possibly use two parameters/pass two arguments if you wanted to create 
