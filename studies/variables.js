@@ -56,8 +56,10 @@ console.log(myVariable); // ==> reassigned again and now prints someString
 
 function setHeight(){
     var height = 10;
-    console.log(height);
+    console.log(height);//==> prints 10
 }
+//trying to access var height outside of this function will throw a reference error
+//console.log(height);==> ReferenceError: height is not defined
 
 /**
  * console.log(height) OUTSIDE of this function will throw a ReferenceError, 

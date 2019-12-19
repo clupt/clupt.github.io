@@ -1,0 +1,26 @@
+{
+  "name": "eloquent-javascript",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Testable Exercises from chapters 2-5 of Eloquent JavaScript",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "mocha ./test || :",
+    "xposttest": "rm -rf ./test ./node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OperationSpark/eloquent-javascript.git"
+  },
+  "author": "livrush",
+  "license": "CC",
+  "homepage": "https://github.com/OperationSpark/eloquent-javascript",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^5.0.10"
+  }
+}

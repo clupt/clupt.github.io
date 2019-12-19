@@ -116,8 +116,8 @@
  */
  
  var nopeNum = 0/0;
- console.log(nopeNum);
- console.log(NaN+3);
+ console.log(nopeNum);//==> prints NaN
+ console.log(NaN+3);//==> prints NaN
  
  //Complex Datatypes
  

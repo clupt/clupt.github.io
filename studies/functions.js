@@ -1,5 +1,5 @@
 /**
- * FUNCTIONS: //(touch on IIFEs somewhere)//
+ * FUNCTIONS:
  * 
  * 0.Functions are containers that house reusable blocks of code. They accept inputs, 
  * process those inputs, and return a new data value. Like everything else in Javascript,

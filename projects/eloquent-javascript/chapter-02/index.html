@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.3/mocha.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="mocha"></div>
+
+  <footer class="container navbar bg-dark fixed-bottom">
+    <div class="container">
+      <a class="nav-item nav-link text-warning" href="/chapter-02">Chapter 02</a>
+      <a class="nav-item nav-link text-light" href="../chapter-03/index.html">Chapter 03</a>
+      <a class="nav-item nav-link text-light" href="../chapter-04/index.html">Chapter 04</a>
+      <a class="nav-item nav-link text-light" href="../chapter-05/index.html">Chapter 05</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.3/mocha.min.js"></script>
+  <script>
+    mocha.setup('')
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.4.0/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sinon.js/4.0.0/sinon.min.js"></script>
+  <script>
+    var assert = chai.assert;
+    var expect = chai.expect;
+    var should = chai.should();
+  </script>
+
+  <!-- include source files here... -->
+  <script src="exercises.js"></script>
+
+  <!-- include spec files here... -->
+  <script src="../spec/chapter-02.spec.js"></script>
+
+  <script>
+    mocha.run()
+  </script>
+</body>
+
+</html>
