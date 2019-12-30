@@ -4,7 +4,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 //create a function called triangles that takes a parameter
-//use that parameter to stop the length of each level of the triangle
+//input: level parameter that sets the length at which each level stops
+/*output: 
+#
+##
+###
+####
+#####
+######
+#######
+*/
+//constraints: the size of the triangle has to be mutable, so hardcoding 7 into the loop is not an option
+//           : should log each level separately
+
 function triangles(level) {
   //using a for loop, declare i to equal the # needed to for the levels of the triangle
   //while the length of the i string is less than the stop parameter being established by the level argument
@@ -23,8 +35,11 @@ triangles(7);
 ////////////////////////////////////////////////////////////////////////////////
 
 //create a function called fizzBuzz that takes two parameters
-//start: is the number from which the range of numbers will begin
-//stop: is the number at which the range of numbers will end
+//input : start: the number from which the range of numbers will begin
+//      :  stop: the number at which the range of numbers will end
+//output: the numbers between the range of numbers, with multiples of 3 producing 'fizz',
+//      : multiples of 5 producing 'buzz', and multiples of both producing 'fizzbuzz'
+//constraints: the range should only be 1-15 (including 15)
 function fizzBuzz(start, stop) {
   
   //write a for loop that iterates through the numbers between (and including) the params
@@ -54,8 +69,21 @@ console.log(results);
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard(size) {
+//create a function called drawChessboard that takes a size as its parameter
+//input: the size parameter of the chessboard 
+/*output: an 8x8 grid of alternating spaces and #
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+*/
+//constraints: the size of the board must be mutable, and cannot be hardcoded into the function
 
+function drawChessboard(size) {
   //create a variable board to house an empty string that will be filled by ' ' or '#'
   let board = '';
   //use a for loop to iterate through the string to create the rows
@@ -68,12 +96,10 @@ function drawChessboard(size) {
     for(let j = 0; j < size; j++){
       //use a conditional statement to determine if the rows will begin with a space or a #
       //add ' ' or '#' to the rows pending on whether they are even or odd, so that it alternates
-      
-      // if the i+j is even, concat a ' ' to the board variable
       // otherwise concat '#' to the board variable
       board += (i % 2) === (j % 2) ? ' ' : '#';
     }
-    // instead of the ternary operator for this, could use an if else statement:
+    // instead of the ternary operator above, could use an if else statement:
     //   if ((i+j) % 2 === 0){
     //   board += ' ';
     //   } else {
@@ -82,8 +108,7 @@ function drawChessboard(size) {
     // } 
     //after the interal loop has ended at the size arg, add a new line break
     //to move to the next row, which is also limited to the size (so we have a grid)
-    //could possibly use two parameters/pass two arguments if you wanted to create 
-    //rectangular boards
+    //could possibly use two parameters/pass two arguments if you wanted to create rectangular boards
     board += '\n';
   } // print the board to the console 
   console.log(board);
@@ -91,6 +116,7 @@ function drawChessboard(size) {
 drawChessboard(8);
 drawChessboard(2);
 drawChessboard(7);
+
   
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

@@ -1,7 +1,7 @@
 {
   "name": "function-master",
   "version": "1.0.0",
-  "private": true,    
+  "private": true,
   "description": "Learn to Master the art of the Function",
   "main": "test-master.js",
   "directories": {
