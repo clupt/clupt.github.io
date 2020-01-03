@@ -50,6 +50,7 @@ function flatten(array) {
 function loop(start, test, update, body) {
   //declare the start value and assign it to variable i
   //run the test function on i on the current loop... while that is true
+  //update is the incremeter inside of the for loop
   for(let i = start; test(i); i = update(i)){
     //call the body function on the updated i value and the update function to create a new value with each iteration and start from the beginning
     body(i);
@@ -162,7 +163,29 @@ function dominantDirection(string) {
 
 console.log(dominantDirection('Hello!'));// expects 'ltr'
 
-  
+
+//kaelyn's solution form class
+// //use the countby function to find all of the scripts
+// let scriptsArr = countBy(string, function(char){
+//   //find the associative script for each character
+//   let script = characterScript(char.codePointAt(0))
+//   // console.log(script);
+//   //check if the script is an actual script and not a symbol
+//   //countBy function returns an array of objects
+//   if(script){
+//     return script.direction;
+//   }
+//   return null;
+// });
+
+// //console.log(scriptArr);
+// //using the array sort method, sort each object by its count property
+// scriptsArr.sort(function(a,b){
+//   return b.count - a.count;
+// })
+// return scriptsArr[0].name;
+// }
+
   
 // /////////////////////////////////////////////////////////////////////////////
 //  //////////////////////////////////////////////////////
