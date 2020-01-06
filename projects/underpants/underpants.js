@@ -551,7 +551,7 @@ _.extend = function(object){
     //use the Array.from method to create a new instance of the collection and call it on the arguments parameter and a function that is called
     //on the element, index, and array
     _.each(Array.from(arguments), function(e, i, array){
-        //use the Object.assign method on the input object and the element
+        //use the Object.assign method on the input object and the
         Object.assign(object, e);
     });
     return object;
