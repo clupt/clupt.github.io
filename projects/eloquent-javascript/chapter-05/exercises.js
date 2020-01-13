@@ -37,14 +37,14 @@ function flatten(array) {
 // /////////////////////////////////////////////////////////////////////////////
 
 //create a higher-order function called loop that acts like a for loop
-//it will take a value, a test function, an unpdate function, and a body function as its parameters
+//it will take a value, a test function, an update function, and a body function as its parameters
 //every time it iterates, it will run the test function on the current loop value and stop if that is false
 //then it will call the body function, giving it a current value, then it will call the update function to create a new value
 //then it starts from the beginning
 
 //input: start value, test (function), update (function), body (function)
 //output: should run a function over an array as if looping
-//constraints: should work with unique test value, unique update value, unqiue body value
+//constraints: should work with unique test value, unique update value, unique body value
 //edge cases: what to do if the current loop value returns false?  what type of loop is best to do the actual looping over the functions?
 
 function loop(start, test, update, body) {

@@ -1,0 +1,28 @@
+{
+  "name": "recursion-prompts",
+  "version": "1.0.0",
+  "description": "Recursion Practice",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OperationSpark/recursion-prompts.git"
+  },
+  "author": "Operation Spark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OperationSpark/recursion-prompts/issues"
+  },
+  "homepage": "https://github.com/OperationSpark/recursion-prompts#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^5.0.10"
+  }
+}
